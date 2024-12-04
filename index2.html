@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/522275db79.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="sidebar">
+        <div class="logo"> HTA 
+            <button class="menu-toggle" onclick="toggleMenu()"> ☰ </button>
+        </div>
+        
+        <ul class="menu">
+            <!-- Dashboard -->
+            <li class="menu-item active">
+                <a href="#dashboard">
+                    <i class="fas fa-tachometer-alt"></i> 
+                    <span class="menu-text">Dashboards</span>
+                </a>
+            </li>
+
+            <!-- Skills/Courses -->
+            <li class="menu-item dropdown">
+                <a href="#" onclick="toggleDropdown(event)">
+                    <i class="fas fa-briefcase"></i> 
+                    <span class="menu-text">Skills/Courses</span>
+                    <i class="fas fa-chevron-down dropdown-icon"></i> <!-- Dropdown icon -->
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="#Add-new">Add New</a></li>
+                    <li><a href="#view-all">View All</a></li>
+                </ul>
+            </li>
+            
+
+            <!-- Batches -->
+            <li class="menu-item dropdown">
+                <a href="#" onclick="toggleDropdown(event)">
+                    <i class="fas fa-users"></i> 
+                    <span class="menu-text">Batches</span>
+                    <i class="fas fa-chevron-down dropdown-icon"></i> <!-- Dropdown icon -->
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="#batch-a">Batch A</a></li>
+                    <li><a href="#batch-b">Batch B</a></li>
+                    <li><a href="#batch-c">Batch C</a></li>
+                </ul>
+            </li>
+            
+
+            <!-- Trainee's Profile -->
+            <li class="menu-item">
+                <a href="#trainee-profile">
+                    <i class="fas fa-user"></i> 
+                    <span class="menu-text">Trainee's Profile</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="main-content">
+        
+        <div class="dashboard">
+            <div class="finance-summary">
+                <div class="summary-item">
+
+                    <!-- countdown -->
+                    <a href="#"><h3><i class="fas fa-user"></i> TRAINEE</h3></a>
+                    <div class="loader"></div>
+                    
+                </div>
+                <div class="summary-item">
+                    <a href="#"><h3> <i class="fas fa-book"></i>  SKILLS/COURSES</h3></a>
+                    <div class="loader"></div>
+
+                    
+                </div>
+                <div class="summary-item">
+                    <a href="#"><h3><i class="fas fa-users"></i> BATCHES</h3></a>
+                   <div class="loader"></div>
+                    
+                </div>
+            
+            </div>
+            <div class="chart-calendar-container">
+                <div class="revenue-chart">
+                    <h4>ADMISSION OVERVIEW</h4>
+                    <canvas id="revenueChart" width="400" height="200"></canvas>
+                    <div class="calendar">
+                        <iframe src="https://calendar.google.com/calendar/embed?src=your_calendar_id&ctz=America%2FNew_York"></iframe>
+                    </div>
+                </div>
+               
+            </div>
+
+            <!-- Google Calendar Embed -->
+            
+
+            <!-- Summary Table -->
+            <div class="summary-table">
+                <h4>Summary Table</h4>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Column 1</th>
+                                <th>Column 2</th>
+                                <th>Column 3</th>
+                                <th>Column 4</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><a href="#row1-col1">Row 1</a></td>
+                                <td><a href="#row1-col2">Row 1</a></td>
+                                <td><a href="#row1-col3">Row 1</a></td>
+                                <td><a href="#row1-col4">Row 1</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#row2-col1">Row 2</a></td>
+                                <td><a href="#row2-col2">Row 2</a></td>
+                                <td><a href="#row2-col3">Row 2</a></td>
+                                <td><a href="#row2-col4">Row 2</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#row3-col1">Row 3</a></td>
+                                <td><a href="#row3-col2">Row 3</a></td>
+                                <td><a href="#row3-col3">Row 3</a></td>
+                                <td><a href="#row3-col4">Row 3</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="#row4-col1">Row 4</a></td>
+                                <td><a href="#row4-col2">Row 4</a></td>
+                                <td><a href="#row4-col3">Row 4</a></td>
+                                <td><a href="#row4-col4">Row 4</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
